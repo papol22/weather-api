@@ -1,27 +1,60 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <title>Weather Forecast</title>
-    <link rel="stylesheet" type="text/css" href="weather.css">
-  </head>
-  <body>
-
 <?php
-  exec("php-cli  weather.api.php");
+//$key = 'ba6129736b1cf027a8103fc44fc3e';
+//$days = '5';
+//$format = 'json';
+//$location = 'Pampanga,Philippines';
+//$url1 = file_get_contents('http://api.worldweatheronline.com/free/v2/weather.ashx?q='.$location.'&num_of_days='.$days.'&format='.$format.'&key='.$key);
+//$json_d = json_decode($url1);
+//
+//	//echo'<pre>';
+//	//print_r($json_d);
+//	//echo'</pre>';
+//
+//parse_str($url1,$myArray);
+//print_r($myArray);
 
-    $location = 'Pampanga,Philippines';
+$key = 'ba6129736b1cf027a8103fc44fc3e';
+$days = '5';
+$location = 'angeles,Pampanga,Philippines';
+$format = 'json';
+$url1 = file_get_contents('http://api.worldweatheronline.com/free/v2/weather.ashx?q='.$location.'&num_of_days='.$days.'&extra=localObsTime&format='.$format.'&key='.$key);
+$json_d = json_decode($url1);
+echo'<pre>';
+print_r($json_d);
+echo'</pre>';
+    // $days = $days-1;
+      foreach ($json_d->data->current_condition as $cur) {
 
-   include('weather.api.php');
-     $location = 'Manila,Philippines';
-  //  include('weather.api.php');
-  //   $location = 'Baguio,Philippines';
-  //  include('weather.api.php');
-  //   $location = 'Cebu,Philippines';
-  //  include('weather.api.php');
-  //   $location = 'Davao,Philippines';
-  //  include('weather.api.php');
-   
+        $cur_cloudcover     = $cur->cloudcover;
+        $cur_FeelsLikeC         = $cur->FeelsLikeC;    
+        $cur_FeelsLikeF         = $cur->FeelsLikeF;
+        $cur_humidity           = $cur->humidity;
+        $cur_observation_time   = $cur->observation_time;
+        $cur_precipMM           = $cur->precipMM;
+        $cur_pressure           = $cur->pressure;
+        $cur_temp_C             = $cur->temp_C;
+        $cur_temp_F             = $cur->temp_F;
+        $cur_visibility         = $cur->visibility;
+        $cur_weatherCode        = $cur->weatherCode;
+        $cur_weatherDesc        = $cur->weatherDesc[0]->value;
+        $cur_weatherIconUrl     = $cur->weatherIconUrl[0]->value;
+        $cur_winddir16Point     = $cur->winddir16Point;
+        $cur_winddirDegree      = $cur->winddirDegree;
+        $cur_windspeedKmph      = $cur->windspeedKmph;
+        $cur_windspeedMiles     = $cur->windspeedMiles;
+
+      }
+
+      foreach ($json_d->data->request as $req) {
+        $query              = $req->query;
+        $type               = $req->type;
+      }
+
+
+      $weather_day = Array();
+      foreach ($json_d->data->weather as $w) {
+        $weather_day[] = $w;      
+      }
 
 
        function getDay( $weather_day ){
@@ -81,7 +114,3 @@
       }
 
 ?>
-
-
-  </body>
-</html>

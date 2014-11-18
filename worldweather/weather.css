@@ -1,49 +1,130 @@
 *{
-        margin: 0px;
-        padding: 0px;
-        font: 13px/1.25 'Helvetica Neue',Helvetica,Arial,sans-serif;
-      }
+  margin: 0px;
+  padding: 0px;
+  font: 12px 'Helvetica Neue',Helvetica,Arial,sans-serif;
+}
+
+
+
+
+
+.loc {
+  font-size: 130%;
+  font-weight: bolder;
+  padding: 4px;
+  height: 16px;
+  background: #96B5E4;
+  border-bottom: solid 3px #FFEB1F;
+}
+
+.body {
+  position: relative;
+  width: 638px;
+  height: 155px;
+}
 
 .wrapper {
-  width: 626px;
-  height: auto;
+
 }
 
 .infos {
   background: #bcbcbc;
-  width: 210px;
-  height: 122px;
+  width: 213px;
+  height: 142px;
   display: inline-block;
   float: left;
+  padding-left: 5px;
+  position: relative;
+
+  background: #96B5E4;
+
+
 }
 
-.infos div{
-  margin: 3px;
-  position: relative;
-  display: block;
-  width: 100%;
+
+.infos img{
+  position: absolute;
+  top: 5px;
+  right: 7px;
+  height: 65px;
+  width: 65px;
+  border-radius: 35px;
 }
+
+
+
+.c_temp {
+  font-size: 190%;
+  font-weight: bolder;
+  width: 100%;
+  margin: 6px 0 6px 0;
+  z-index: 99;
+}
+
+.d{
+  margin: 6px 0 5px 0;
+  font-size: 100%;
+  z-index: 99;
+}
+
+
+
 
 
 
 .days-wrapper {
-  background: #bcbcbc;
-  width: 416px;
-  height: 122px;
+ 
+  width: 420px;
+  height: 142px;
   display: inline-block;
   float: left;
+
+  background: #96B5E4;
 }
 
+.dateday {
+  margin: 3px 0;
+  color: #483D8B;
+  font-size: 110%;
+}
 
 .day {
+  position: relative;
+  margin-right: 4px;
   text-align: center;
   display: inline-block;
   width: 80px;
   height: 100%;
-  background: #cccccc;
+  background: rgba(255,255,255,.5);
 }
+
+
 
 .day img {
   width: 60px;
   height: 60px;
+  border-radius: 5px;
 }
+
+
+.wDesc{
+  height: 25px;
+  width: 100%;
+  font-size: 95%;
+  display: block;
+}
+
+.mmC {
+ display: block;
+  margin-top: 2px;
+  font-size: 100%;
+  color: #483D8B;
+}
+
+
+.mmF {
+  display: block;
+  font-size: 90%;
+  color: #483D8B;
+}
+
