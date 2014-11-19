@@ -1,0 +1,10 @@
+http://msdn.microsoft.com/en-us/library/ff512385.aspx
+http://msdn.microsoft.com/en-us/library/ff512406.aspx
+http://www.i-programmer.info/projects/36-web/2515-getting-started-with-bing-translate.html?start=1
+http://www.programmableweb.com/api/bing-translator
+http://webspeechapi.blogspot.com/2013/04/how-to-use-new-bing-translator-api-with.html
+http://wangpidong.blogspot.com/2012/04/how-to-use-new-bing-translator-api-with.html
+http://svendeswan.wordpress.com/2014/08/14/using-bing-translator-version-2-from-php/
+http://www.codediesel.com/php/microsoft-bing-translate-php-wrapper/
+http://msdn.microsoft.com/en-us/library/hh456380.aspx
+http://www.sitepoint.com/translation-text-speech-microsoft-translator/

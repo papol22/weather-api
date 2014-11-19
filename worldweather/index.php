@@ -16,7 +16,6 @@
 	$time_end = microtime_float();
 	$time = round($time_end - $time_start, 5);
 
-	
 	echo "<h3>Script Run Time: $time</h3>";
 	echo $output;
 	
