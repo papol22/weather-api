@@ -1,36 +1,51 @@
-<!DOCTYPE html>
+
 <html>
-  <head>
-    <meta charset="utf-8">
-    <title>Weather Forecast</title>
-    <link rel="stylesheet" type="text/css" href="weather.css">
-  </head>
-  <body>
-  	  <?php
-		// Requested file
-		// Could also be e.g. 'currencies.json' or 'historical/2011-01-01.json'
-		$file = 'latest.json';
-		$appId = 'af94a138eabd4539b6eddf79cf965254';
+<head></head>
+<body>
+<?php
+	include('simple_html_dom.php');
+	$from = 'PHP';
+	$html = file_get_html('http://fx-rate.net/'.$from.'/');
+	
+	
+
+	$rows = $html->find('#toptencurrencies table',0);
+	$rows1 = $rows->find('tbody tr');
+	
+
+	$a = Array();
+	foreach ($rows1 as $row) {
+		//$a[] = $row;
+		echo $row->children(2)->children(0)->innertext;
 		
-		// Open CURL session:
-		$ch = curl_init("http://openexchangerates.org/api/{$file}?app_id={$appId}");
-		curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
-		
-		// Get the data:
-		$json = curl_exec($ch);
-		curl_close($ch);
-		
-		// Decode JSON response:
-		$exchangeRates = json_decode($json);
-		
-		// You can now access the rates inside the parsed object, like so:
-		printf(
-		    "1 %s in GBP: %s (as of %s)",
-		    $exchangeRates->base,
-		    $exchangeRates->rates->GBP,
-		    date('H:i jS F, Y', $exchangeRates->timestamp)
-		);
-		// -> eg. "1 USD in GBP: 0.643749 (as of 11:01, 3rd January 2012)"
-?> 
-  </body>
+	}
+
+//http://fx-rate.net/PHP/USD
+//http://www.bloomberg.com/quote/PHPKRW:CUR
+	//function rate($a){
+	//	$data = Array();
+	//		$data['to'] = $a->find('td a',0)->href;
+	//		$data['title'] = $a->find('td a',0)->title;
+	//		$data['title'] = $a->find('td a img',0)->src;
+	//		$data['toFrom'] = $a->find('td a',1)->innertext;
+	//		$data['fromTo'] = $a->find('td a',2)->innertext;
+	//	return $data;
+	//}
+	//echo $a[0]->title;
+
+	//echo '<pre>';
+	//print_r($a);
+	//echo '</pre>';
+
+//foreach ($rows as $row) {
+//	foreach ($row->find('td a img') as $img) {
+//		echo $img->src.'<br>';
+//	}
+//}   
+
+
+
+   
+?>
+</body>
 </html>

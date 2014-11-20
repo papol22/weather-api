@@ -6,6 +6,7 @@ php_sapi_name();
       $format = 'json';
       $url1 = file_get_contents('http://api.worldweatheronline.com/free/v2/weather.ashx?q='.$location.'&num_of_days='.$days.'&extra=localObsTime&format='.$format.'&key='.$key);
       $json_d = json_decode($url1);
+      
     // $days = $days-1;
       foreach ($json_d->data->current_condition as $cur) {
 
