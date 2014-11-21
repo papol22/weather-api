@@ -9,29 +9,43 @@
 	
 	
 
-	$rows = $html->find('#toptencurrencies table',0);
+	$rows = $html->find('#toptencurrencies table',1);
 	$rows1 = $rows->find('tbody tr');
 	
 
-	$a = Array();
 	foreach ($rows1 as $row) {
-		//$a[] = $row;
-		echo $row->children(2)->children(0)->innertext;
-		
+			$a = Array();
+			foreach ($row->find('td a') as $aa) {
+				$aa['to'] = $aa->href;
+				$aa['title'] = $aa->title;
+			}
+			$a[] = $aa;
+
 	}
+	
 
 //http://fx-rate.net/PHP/USD
 //http://www.bloomberg.com/quote/PHPKRW:CUR
-	//function rate($a){
-	//	$data = Array();
-	//		$data['to'] = $a->find('td a',0)->href;
-	//		$data['title'] = $a->find('td a',0)->title;
-	//		$data['title'] = $a->find('td a img',0)->src;
-	//		$data['toFrom'] = $a->find('td a',1)->innertext;
-	//		$data['fromTo'] = $a->find('td a',2)->innertext;
-	//	return $data;
-	//}
-	//echo $a[0]->title;
+	function rate($a){
+		$data = Array();
+			foreach ($a->find('td a',0) as $aa) {
+				$data['to'] = $aa->href;
+				$data['title'] = $aa->title;
+				foreach ($a->find('td a img',0) as $img) {
+				$data['img'] = $img->src;
+					foreach ($a->find('td a',1) as $value1) {
+					$data['toFrom'] = $value1->innertext;
+						foreach ($a->find('td a',3) as $value2) {
+						$data['fromTo'] = $value2->innertext;
+						}
+					}
+				}
+			}
+			
+			
+		return $data;
+	}
+	
 
 	//echo '<pre>';
 	//print_r($a);
