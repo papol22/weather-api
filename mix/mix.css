@@ -1,0 +1,108 @@
+
+#body {
+	width: 200px;
+	height: 120px;
+//	background: #123456;
+	position: relative;
+	border: 3px solid #5186CB;
+//	border-radius: 5px;
+}
+
+.weather {
+//	background: #654321;
+	height: 100%;
+	width: 117px;
+	float: left;
+}
+
+
+.w-location {
+	width: 100%;
+	height: 11px;
+	font-size: 12px;
+	font-weight: bolder;
+	padding-left: 4px;
+}
+
+
+.w-top {
+	height: 51px;
+	width: 100%;
+}
+
+
+.weather .w-top img{
+	border-radius: 35px;
+	height: 35px;
+	width: 35px;
+	margin: 5px 0 0 4px;
+	float: left;
+}
+
+.c_temp {
+	padding:0  0 0 5px;
+	font-size: 20px;
+	float: left;
+}
+
+.c_time {
+	padding: 4px 0 0 5px;
+	font-size: 12px;
+	float: left;
+}
+
+
+.d {
+	display: table;
+	font-size: 12px;
+	padding-left: 4px;
+}
+
+.c_desc{
+	font-size: 13.5px;
+	padding: 2px 0 0 7px;
+}
+
+
+.currency {
+	display: block;
+	height: 93px;
+	width: 80px;
+	float: left;
+	margin-left: 2px;
+	font-size: 12px;
+}
+
+.currency {
+	//border-left: solid 1px #5186CB;
+	-webkit-box-shadow: -1px 1px 6px 0px rgba(81,134,203,1);
+	-moz-box-shadow: -1px 1px 6px 0px rgba(81,134,203,1);
+	box-shadow: -1px 1px 6px 0px rgba(81,134,203,1);
+}
+
+.currency div {
+	margin-bottom: 0.45px;
+	width: 100%;
+	font-size: 13px;
+	display: inline-flex;
+	padding-left: 1px;
+}
+.currency .cur-top {
+	font-weight: bolder;
+	margin-bottom: 2px;
+
+	font-size: 11px;
+}
+
+.currency .code{
+	height: 12px;
+	width: 70px;
+}
+
+.currency .val{
+	font-size: 12px;
+}
+
+.day {
+	position: absolute;
+}

@@ -1,6 +1,5 @@
 <?php
 	
-
 $from = $_GET['from'];
 $to = $_GET['to'];
 $amount = $_GET['amount'];
