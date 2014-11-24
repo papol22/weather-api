@@ -9,22 +9,25 @@
 		height: 1050px;
 		display: inline-flex;
 	}
-	.list {
-		width: 350px;
-	}
-	.convert {
+
+	.convert { 
 		height: 90px;
 		background: #EAEAEA;
 		padding: 0 10px 0 10px;
 		position: fixed;
-
 	}
-	#aText,#aText1{
+	#aText{
 		width: 177px;
 	}
+
 	table {
 		margin-bottom: 20px;
 	}
+
+	.a{
+		width: 80px;
+	}
+	
 	</style>
 </head>
 <body>
@@ -38,9 +41,6 @@
 
 	<div class='wrapper'>
 		<div class='list'>
-			<div>
-
-			</div>
 		<?php
 	echo "<table>
 				<tr>
@@ -53,8 +53,8 @@
 	echo "<tr>
 			<td><img src='".$d['data']['img']."'/></td>
 			<td>".$d['data']['title']."</td>
-			<td>".$d['data']['fromTo']."</td>
-			<td>".$d['data']['toFrom']."</td>
+			<td class='a'>".$d['data']['fromTo']."</td>
+			<td class='a'>".$d['data']['toFrom']."</td>
 		</tr>";
 			}
 	echo "</table>";

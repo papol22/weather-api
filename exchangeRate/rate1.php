@@ -28,7 +28,7 @@
 
 	foreach ($cur as $cur1) {
 		$Data[$ctr+1]['data']['to'] = $from;
-		$Data[$ctr+1]['data']['title'] = $cur1->plaintext;	
+		$Data[$ctr+1]['data']['title'] = str_replace("&nbsp;",'',$cur1->plaintext);	
 		$Data[$ctr+1]['data']['img'] = $cur1->children(0)->src;	
 		$Data[$ctr+1]['data']['fromTo'] = 1;	
 		$Data[$ctr+1]['data']['toFrom'] = 1;	

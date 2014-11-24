@@ -20,11 +20,19 @@ $array = unserialize(get_array());
 		
 		if( $data['data']['to'] == $to ){
 			$val1 = $data['data']['toFrom'];	
+			$code = $data['data']['to'];
 		}
 	}
+	
+
+
 
 	$amount = number_format(($val/$val1)*$amount, 2);
-	echo 'Value: '.$amount;
+	echo $code.': '.$amount;
+
+
+
+
 
 	function get_array()
 	{
