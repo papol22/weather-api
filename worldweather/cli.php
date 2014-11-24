@@ -1,7 +1,7 @@
 <?php
 
 		ob_start();
-		$location = 'Pampanga,Philippines';
+		$location = 'Manila,Philippines';
 		include('weather.api.php');
 		 $location = 'Manila,Philippines';
 		include('weather.api.php');
