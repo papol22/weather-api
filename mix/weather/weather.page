@@ -1,15 +1,15 @@
-1416834210
+1416988255
 
 		<div class='w-top'>
 			<div class='w-location'>Manila, Philippines</div>
-			<img src='http://cdn.worldweatheronline.net/images/wsymbols01_png_64/wsymbol_0004_black_low_cloud.png'/>
-			<div class='c_time'>09:02 PM</div>
-			<div class='c_temp'>28 °C</div>
+			<img src='http://cdn.worldweatheronline.net/images/wsymbols01_png_64/wsymbol_0002_sunny_intervals.png'/>
+			<div class='c_time'>03:48 PM</div>
+			<div class='c_temp'>32 °C</div>
 			
 		</div>
 			
-			<div class='c_fl d'>Feels like: 33°C</div>
-        	<div class='c_hum d'>Humidity: 84%</div>
-        	<div class='c_wind d'>Wind: ESE 6mph</div>
+			<div class='c_fl d'>Feels like: 38°C</div>
+        	<div class='c_hum d'>Humidity: 63%</div>
+        	<div class='c_wind d'>Wind: ESE 8mph</div>
         	<div class='c_desc d'>Partly Cloudy</div>
 	
