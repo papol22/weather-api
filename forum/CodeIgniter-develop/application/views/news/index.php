@@ -6,7 +6,7 @@
                 <?php echo $news_item['text'] ?>
         </div>
         <p>	
-			<a href="view/<?php echo $news_item['slug'] ?>">View article</a> 
+			<a href="./view/<?php echo $news_item['slug'] ?>">View article</a> 
 			<a href="update/<?php echo $news_item['id'] ?>">Edit</a>
 			<a href="delete/<?php echo $news_item['id'] ?>">Delete</a>
 		</p>
