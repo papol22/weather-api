@@ -1,0 +1,307 @@
+*{
+	padding: 0;
+	margin: 0;
+	text-decoration: none;
+}
+
+a {
+	color: #D52B45;
+}
+
+#body {
+	margin: 0 auto;
+	width: 900px;
+}
+
+img[alt='cmt-img'] {
+	width: 33px;
+	height: 30px;
+}
+
+header {
+	margin-bottom: 40px;
+	width: 100%;
+	border-bottom: 2px solid #303030;
+}
+
+.header-top{
+	padding: 3px 0 7px 0;
+	height: 20px;
+	font-size: 15px;
+}
+
+.header-top{
+	background: #303030;
+}
+
+.ht{
+	float: right;
+	margin: 5px;
+}
+
+.ht a{
+	float: left;
+	display: block;
+	margin: 0 0 0 10px;
+}
+
+.ht .logout-btn{
+	
+}
+
+.ht .create-btn{
+	background: #D52B45;
+	color: #303030;
+	width: 110px;
+	text-align: center;
+}
+
+
+
+
+.header-bot{
+	height: 34px;
+	background: #D52B45;
+	font-size: 19px;
+	/*border-radius: 0 0 5px 5px;*/
+
+}
+
+
+.hb {
+	height: 100%;
+}
+
+.hb a{ 
+	font-size: 20px;
+	color: #303030;
+	display: block;
+	padding-top: 10%;
+}
+
+
+.hb li:hover a, .hb a:hover{
+	color: #D52B45;
+	background: #303030;
+}
+
+.hb ul{
+	
+}
+
+.hb li{
+	float: left;
+	height: 100%;
+	padding: 0 18px;
+}
+
+.hb li:hover{
+	background: #303030;
+}
+
+
+
+
+
+
+
+#ForumOnline{
+	width: 100%;
+	background: #eeeeee;
+}
+
+#ForumOnline div{
+	background: #79B3CD;
+	height: 30px;
+	padding: 5px 0 0 15px;
+}
+
+#ForumOnline table , #forumOnline a{
+	color: #11445A;
+	width: 100%;
+}
+
+#forumOnline a:hover{
+	color: #D52B45;
+}
+
+td.img{
+	width: 50px;
+	height: 100%;
+}
+
+td.title{
+	width: 500px;
+	height: 100%;
+}
+
+
+
+footer {
+	text-align: center;
+	background: #D52B45;
+	padding: 5px 0;
+	/*border-top: 2px solid #303030;*/
+	border-radius: 0 0 5px 5px;
+	margin-bottom: 20px;
+}
+
+#login-form{
+	width: 200px;
+	margin: 50px auto;
+}
+
+#login-form [type='submit']{
+	width: 80px;
+}
+
+
+
+
+
+#register-form {
+	width: 200px;
+	margin: 50px auto;
+}
+
+#register-form [type='submit']{
+	width: 120px;
+}
+
+#register-form input, #login-form input {
+	margin: 5px 1px;
+}
+
+
+
+
+/*ARTICLE*/
+
+
+#article-wrapper {
+	width: 100%;
+	height: auto;
+}
+
+
+#a-top{
+	height: 20px;
+	width: 100%;
+}
+
+
+
+
+.at-right{
+	float: right;
+	width: 100%;
+	height: 25px;
+	width: 50%;
+}
+
+.at-right a{
+	float: right;
+	display: block;
+	height: 20px;
+	padding: 5px;
+	background: #303030;
+	border-radius: 5px 5px 0 0 ;
+}
+
+.ab-top{
+	width: 100%;
+	height: 20px;
+	background: #303030;
+}
+
+#a-bot .ab-top{
+	border-radius: 5px 0 0 0 ;
+}
+
+#a-bot .ab-main{
+	height: auto;
+	width: 100%;
+	background: #FAFAFA;
+}
+
+.ab-main table{
+	width: 100%;
+}
+.ab-main tr {
+
+}
+.ab-main td {
+padding: 17;
+}
+
+.ab-bot {
+	background: #FAFAFA;
+}
+
+.at-left {
+	float: left;
+}
+
+.at-left , .abb-left{
+	width: 50%;
+	height: 20px;
+}
+
+.at-left a, .at-left strong , .abb-left a, .abb-left strong{
+	font-size: 18px;
+	display: block;
+	float: left;
+	height: 100%;
+	text-align: center;
+	width: auto;
+	padding: 0 10px;
+}
+
+
+
+
+
+
+
+#Post {
+	width: 850px;
+	height: auto;
+	margin: 0 auto;
+}
+
+#Post input{
+	margin: 7.5px 1px;
+	padding: 5px 5px;
+}
+
+#Post [type='text']{
+	width: 500px;
+}
+
+#Post [for='title']{
+	font-size: 20px;
+	display: inline-block;
+	vertical-align: sub;
+	margin-right: 5px;
+}
+
+#Post [for='error']{
+	font-size: 16px;
+	display: block;
+	color: red;
+}
+
+
+
+/*VIEW POST*/
+/*
+* ----------------------------------
+*
+*
+*
+*
+*
+*
+*/
+
+
