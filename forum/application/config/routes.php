@@ -93,8 +93,10 @@ $route['translate_uri_dashes'] = FALSE;
 $route['(:any)'] = 'forum/$1';
 $route['register'] = 'user/register';
 $route['sign-in'] = 'user/login';
+
+$route['general/upload'] = 'forum/do_upload';
 $route['general/(:any)'] = 'general/$1';
 $route['general/view-article/(:num)'.'-'.'(:any)'] = 'general/view_article/$1';
-$route['general/edit-article/(:num)'] = 'general/$1';
+$route['general/edit-article/(:num)'.'-'.'(:any)'] = 'general/edit_article/$1';
 /* End of file routes.php */
 /* Location: ./application/config/routes.php */

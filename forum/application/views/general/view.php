@@ -54,7 +54,7 @@
 
 
 	<div class='vp-top'>
-		<a href='<?php echo base_url().'general/edit-article/'.$post_data['id']; ?>' class='vpt-edit'>
+		<a href='<?php echo base_url().'general/edit-article/'.$post_data['id'].'-'.$post_data['title']; ?>' class='vpt-edit'>
 			 Edit Post
 		</a>
 		<?php echo 'Title: '.$post_data['title']; ?> <br>

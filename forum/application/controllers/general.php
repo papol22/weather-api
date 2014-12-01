@@ -86,9 +86,23 @@
 		public function view_article($id = NULL){
 			$this->load->model('post_model');
 			$data['post_data'] = $this->post_model->get_post($id);
-
 			$data['view_content'] = 'general/view';
 			$this->load->view('forum/view', $data);
 		}
+
+
+		public function edit_article($id = NULL){
+
+			$this->db->where('id',$id);
+			$data['post_data'] = $this->db->get('article');
+
+			print_r($data['post_data']->result_array());
+
+			// $data['view_content'] = 'general/post';
+			// $data['title'] = '';
+			// $this->load->view('forum/view', $data);
+		}
+
+
 
 	}
