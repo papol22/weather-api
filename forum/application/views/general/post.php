@@ -13,17 +13,58 @@
 			echo form_upload(Array('name' => 'userfile','class' => 'upload'));
 			echo form_submit( array('name' => 'submit', 'value' => 'Upload' , 'formaction' => 'upload') );
 			if(isset($error)){ echo $error['error']; }  
-			if(isset($file)){  echo '<img src="application/includes/upload/'.$file['file_name'].'" alt="Smiley face" height="42" width="42">' ; }  
+			if(isset($file)){  
+				$img = '<img src="'.base_url().'application/includes/upload/'.$file['file_name'].'" alt="Smiley face" height="42" width="42">'; 
+			}  
 			echo form_close(); 
 			
 		?>
 
-
-
 </div>
 
 <script type="text/javascript">
-	// $('#post .upload').change(function(){
-	// 	window.location.replace('../do_upload/');
+$( document ).ready(function() {
+    
+	$('#post .upload').change(function(){  
+	var upload_data = $('#post .upload').val()
+	var post_url = "<?php echo base_url();?>do_upload";
+	$.ajax({
+	    type: "POST",
+	    url: post_url,
+	    data: upload_data,
+	    success: function(data) 
+    	{
+        	alert(data);
+    	}
+    });
+});
+    
+});
+	
+	
+	// $('.upload').change(function(){
+	// 	window.location.replace("<?php echo base_url(); ?>do_upload");
+	// 	CKEDITOR.instances.content.insertHtml(<?php echo $img ?>);
+
+	// });
+
+	// $('.upload').change(function(){
+ //  		img = "<img src='<?php echo base_url(); ?>application/includes/upload/thumb/Mario_SM3DW_thumb.png'/>'";
+ //  		CKEDITOR.instances.content.insertHtml(img);
+	//  });
+
+	// $('#post .upload').change(function(){  
+
+	// 	var upload_data = $('#post .upload').val()
+	// 	var post_url = "<?php echo base_url();?>do_upload";
+	// 	$.ajax({
+	// 	    type: "POST",
+	// 	    url: post_url,
+	// 	    data: upload_data,
+	// 	    success: function(data) 
+	//     	{
+	//         	alert(data);
+	//     	}
+	//     });
 	// });
 </script>

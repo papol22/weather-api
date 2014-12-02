@@ -21,12 +21,13 @@ class Forum extends CI_Controller {
 
 
 
-	public function do_upload(){		
+	public function do_upload(){	
+
 		$config['upload_path'] = 'application/includes/upload/';
 		$config['allowed_types'] = 'gif|jpg|png';
-		$config['max_size']	= '100';
-		$config['max_width']  = '1024';
-		$config['max_height']  = '768';
+		$config['max_size']	= '1000';
+		$config['max_width']  = '1800';
+		$config['max_height']  = '1600';
 
 		$this->load->library('upload', $config);
 
@@ -41,10 +42,31 @@ class Forum extends CI_Controller {
 			}
 			else
 			{
-				$data['file'] = $this->upload->data();
-				$data['view_content'] = 'general/post';
-				$data['title'] = 'Posting a New Article in General';
-				$this->load->view('forum/view', $data);
+				$file = $this->upload->data();
+				$config1['image_library'] = 'gd2';
+				$config1['source_image']	= $file['full_path'];
+				$config1['new_image'] = 'application/includes/upload/thumb/';
+				$config1['create_thumb'] = TRUE;
+				$config1['maintain_ratio'] = TRUE;
+				$config1['width']	= 150;
+				$config1['height']	= 100;
+				
+				$this->load->library('image_lib', $config1); 
+				if ( ! $this->image_lib->resize())
+				{
+    				$data['error'] = array('error' => $this->image_lib->display_errors());
+					$data['view_content'] = 'general/post';
+					$data['title'] = 'Posting a New Article in General';
+					$this->load->view('forum/view', $data);
+				}
+				else
+				{
+					$data['file'] = $file;
+					$data['view_content'] = 'general/post';
+					$data['title'] = 'Posting a New Article in General';
+					$this->load->view('forum/view', $data);
+					
+				}
 			}
 		
 

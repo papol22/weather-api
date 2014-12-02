@@ -6,6 +6,7 @@
 			echo form_password(Array(	'name' => 'password','placeholder' => 'Password'));
 			echo form_submit('submit', 'Login');
 			echo anchor('register', 'Create Account');
+			echo '<input name="remember_me" value="remember me" type="checkbox" />';
 			echo form_close();
 		?>
 </div>

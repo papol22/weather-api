@@ -10,7 +10,7 @@
 			<?php
 				if($login == TRUE)
 				{
-					echo "<a href='new_article''>Start New Article</a>";
+					echo "<a href='".base_url()."general/new_article''>Start New Article</a>";
 				}
 				else
 				{
@@ -28,7 +28,7 @@
 
 					foreach ($users->result_array() as $u) {
 						if($rows['user'] == $u['id']){
-							$this->table->add_row(anchor('general/view-article/'.$rows['id'].'-'.$rows['title'],$rows['title']),ucfirst($u['username']),date('d M Y', $rows['datetime']));
+							$this->table->add_row(anchor('general/view-article/'.$rows['id'],$rows['title']),ucfirst($u['username']),date('d M Y', $rows['datetime']));
 						}
 					}
 				}
