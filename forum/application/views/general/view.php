@@ -52,8 +52,14 @@
 
 <div id='view-post'>
 
+		<a href='<?php echo base_url().'general/article'; ?>'>
+			 List Forum
+		</a>
+		
+		
 
 	<div class='vp-top'>
+		
 		<a href='<?php echo base_url().'general/edit-article/'.$post_data['id']; ?>' class='vpt-edit'>
 			 Edit Post
 		</a>

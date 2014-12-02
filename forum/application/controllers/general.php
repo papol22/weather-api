@@ -18,10 +18,18 @@
 			$config['total_rows'] = $this->db->get('article')->num_rows();
 			$config['per_page'] = 15;
 			
+			$config['cur_tag_open'] = "<strong style='color:red;'>";
+			$config['cur_tag_close'] = "</strong>";
+			
+			
 			$this->pagination->initialize($config);
 
-								$this->db->order_by('id','desc');
+			
+			$this->db->order_by('id','desc');
+			
 			$data['records'] = 	$this->db->get('article', $config['per_page'], $this->uri->segment(3));
+			
+			
 			$data['users'] = $this->db->get('user');
 
 			$data['view_content'] = 'general/article';
@@ -51,7 +59,7 @@
 						array(
 							'field' => 'title',
 							'label' => 'Title',
-							'rules' => 'trim|required|min_length[6]|max_length[40]',
+							'rules' => 'trim|required|min_length[6]|max_length[255]',
 						),
 						array(
 							'field' => 'content',
@@ -72,7 +80,7 @@
 
 					if($query = $this->post_model->go_post())
 					{
-						redirect(forum/home);
+						redirect('general/article');
 					}
 					else
 					{

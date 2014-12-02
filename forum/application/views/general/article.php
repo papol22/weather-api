@@ -28,8 +28,13 @@
 
 					foreach ($users->result_array() as $u) {
 						if($rows['user'] == $u['id']){
-							$this->table->add_row(anchor('general/view-article/'.$rows['id'].'-'.$rows['title'],$rows['title']),ucfirst($u['username']),date('d M Y', $rows['datetime']));
+							$this->table->add_row(
+								anchor('general/view-article/'.$rows['id'], $rows['title']),ucfirst($u['username']),date('d M Y', $rows['datetime'])
+							);
 						}
+						//
+						//.'-'.$rows['title'],$rows['title']),ucfirst($u['username']),date('d M Y', $rows['datetime'])
+						
 					}
 				}
 				echo $this->table->generate();

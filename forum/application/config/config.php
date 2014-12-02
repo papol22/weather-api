@@ -53,11 +53,11 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 | environments.
 |
 */
-<<<<<<< HEAD:forum/CodeIgniter-develop/application/config/config.php
-$config['base_url'] = 'http://work.org/git/weather-api/forum/CodeIgniter-develop/';
-=======
+
 $config['base_url'] = 'http://work.org/git/forum';
->>>>>>> 4159ded46bfa2b55d0adfac39d098f34e83b924d:forum/application/config/config.php
+$config['base_url'] = 'http://work.org/git/weather-api/forum/';
+
+
 
 /*
 |--------------------------------------------------------------------------
