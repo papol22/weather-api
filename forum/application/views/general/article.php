@@ -10,7 +10,7 @@
 			<?php
 				if($login == TRUE)
 				{
-					echo "<a href='new_article''>Start New Article</a>";
+					echo "<a href='".base_url()."general/new_article''>Start New Article</a>";
 				}
 				else
 				{

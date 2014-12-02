@@ -49,7 +49,7 @@
 </style>
 
 
-
+<a href='<?php echo base_url().'general/article'; ?>'><-Article</a>
 <div id='view-post'>
 
 		<a href='<?php echo base_url().'general/article'; ?>'>
@@ -59,12 +59,19 @@
 		
 
 	<div class='vp-top'>
-		
-		<a href='<?php echo base_url().'general/edit-article/'.$post_data['id']; ?>' class='vpt-edit'>
-			 Edit Post
+		<a href='<?php echo base_url().'general/update-article/'.$post_data['id']; ?>' class='vpt-edit'>
+			 Update Post
 		</a>
 		<?php echo 'Title: '.$post_data['title']; ?> <br>
-		Started by Papol22, November 01, 2014
+		
+		
+		Started by <?php  
+			$this->db->where('id',$post_data['user']);
+			$this->db->select('username');
+			$query = $this->db->get('user');
+			$row   = $query->row_array();
+			echo ucfirst($row['username']);
+			echo date(' , F d Y', $post_data['datetime']); ?>
 		
 	</div>
 	<div class='vp-content'>

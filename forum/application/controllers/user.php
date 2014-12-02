@@ -6,6 +6,17 @@
 	{
 		
 
+		function __construct() {
+        parent::__construct();
+ 
+        if ( $this->input->post( 'remember_me' ) )
+            $this->config->set_item('sess_expire_on_close', '0');
+ 
+       		 $this->load->library('session');
+
+   		 }
+
+
 		function login()
 		{
 			$data['view_content'] = 'user/login_form';
